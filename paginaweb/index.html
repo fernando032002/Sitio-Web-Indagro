@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>INDAGRO</title>
+
+    <!-- Conexión con CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header class="header">
+
+        <div class="logo">
+            <a href="#inicio">
+                <img src="img/eslogan.png">
+            </a>
+        </div>
+
+        <nav class="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+        </nav>
+
+        <button class="menu-btn" id="menuBtn">
+            ☰
+        </button>
+
+    </header>
+
+    <!-- =========================
+         INICIO
+    ========================== -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <img src="img/esloganIndagro.png" width="850" height="400" alt="Eslogan de INDAGRO">
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+        PRODUCTOS
+    ========================== -->
+
+    <section class="productos" id="productos">
+
+        <div class="section-title">
+
+            <h2>
+                PRODUCTOS
+            </h2>
+
+        </div>
+
+        <div class="cards">
+
+
+            <!-- CONTROL ELÉCTRICO -->
+
+            <article class="card" data-servicio="control">
+
+                <img src="img/servicio1.png" alt="Control eléctrico">
+
+                <div class="info-hover">
+                    CONTROL ELÉCTRICO
+                </div>
+
+            </article>
+
+            <!-- POTENCIA ELÉCTRICA -->
+
+            <article class="card" data-servicio="potencia">
+
+                <img src="img/motorimg.png" alt="Potencia eléctrica">
+
+                <div class="info-hover">
+                    POTENCIA ELÉCTRICA
+                </div>
+
+            </article>
+
+            <!-- HIDRÁULICA -->
+
+            <article class="card" data-servicio="hidraulica">
+
+                <img src="img/servicio3.png" alt="Hidráulica">
+
+                <div class="info-hover">
+                    HIDRÁULICA
+                </div>
+
+            </article>
+
+            <!-- AUTOMATIZACIÓN -->
+
+            <article class="card" data-servicio="automatizacion">
+
+                <img src="img/servicio4.png" alt="Automatización">
+
+                <div class="info-hover">
+                    AUTOMATIZACIÓN
+                </div>
+
+            </article>
+
+            <!-- NEUMÁTICA -->
+
+            <article class="card" data-servicio="neumatica">
+
+                <img src="img/servicio5.png" alt="Neumática">
+
+                <div class="info-hover">
+                    NEUMÁTICA
+                </div>
+
+            </article>
+
+        </div>
+       <!-- =========================
+     DETALLE DEL PRODUCTO
+========================= -->
+
+<div class="service-detail" id="serviceDetail">
+
+    <h2 id="serviceTitle">
+        Selecciona un producto
+    </h2>
+
+    <p id="serviceDescription">
+        Haz clic en un producto para ver más información.
+    </p>
+
+    <!-- Imagen única -->
+    <div class="product-main-image">
+
+        <img id="serviceImage"
+             src=""
+             alt="Imagen del producto">
+
+    </div>
+
+    <!-- Información -->
+    <div class="service-content">
+
+        <br>
+        <p id="serviceText">
+            Aquí aparecerá la información del producto seleccionado.
+        </p>
+
+    </div>
+    <br>
+    <button class="btn" id="backServices">
+        REGRESAR A PRODUCTOS
+    </button>
+
+</div>
+
+    </section>
+
+    <!-- =========================
+         ********
+    ========================== -->
+
+    <section class="promotion">
+
+        <div class="promotion-content">
+
+            <h2>
+                **** /
+            </h2>
+
+            <p>
+                .......
+            </p>
+
+            <a href="#contacto" class="btn">
+                MÁS INFORMACIÓN
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+     NOSOTROS
+========================= -->
+
+<section class="about" id="nosotros">
+
+    <div class="about-content">
+
+        <!-- =========================
+             INFORMACIÓN
+        ========================== -->
+
+        <div class="about-text">
+
+            <h2>
+                NOSOTROS
+            </h2>
+            <h3>MISION:</h3>
+            <p>Optimizar la continuidad operativa de nuestros clientes mediante 
+                soluciones prontas y multidisciplinarias a los desafíos de 
+                los procesos, 
+                <u>garantizando un respaldo técnico especializado 
+                en cualquier horario y momento del año.</u></p>
+            <h3>VISION:</h3>
+            <p>Ser el ecosistema de soporte y abastecimiento agroindustrial líder en 
+                la Huasteca, reconocido por garantizar las cero interrupciones de los 
+                procesos <i>mediante la disponibilidad inmediata de refacciones, soluciones 
+                en equipos de alta eficiencia y servicios predictivos especializados
+                para el sector Agroindustrial.</i></p>
+
+        </div>
+
+        <!-- =========================
+             CARRUSEL
+        ========================== -->
+
+        <div class="about-carousel">
+
+            <div class="carousel-container">
+
+                <img src="nosotros1.jpg"
+                     class="carousel-image active"
+                     alt="INDAGRO">
+
+                <img src="nosotros2.jpg"
+                     class="carousel-image"
+                     alt="INDAGRO">
+
+                <img src="nosotros3.jpg"
+                     class="carousel-image"
+                     alt="INDAGRO">
+
+                <img src="nosotros4.jpg"
+                     class="carousel-image"
+                     alt="INDAGRO">
+
+            </div>
+
+            <!-- BOTÓN ANTERIOR -->
+
+            <button class="carousel-button prev" id="prevAbout">
+                &#10094;
+            </button>
+
+            <!-- BOTÓN SIGUIENTE -->
+
+            <button class="carousel-button next" id="nextAbout">
+                &#10095;         
+            </button>
+
+        </div>
+        <div class="imagen-valores">
+    <img src="img/valores.png" alt="">
+</div>
+
+    </div>  
+
+</section>
+
+<!-- =========================
+     CONTACTO
+========================= -->
+
+<section class="contact" id="contacto">
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+
+            <h2>CONTÁCTANOS</h2>
+
+            <p>
+                ¿Tienes alguna pregunta o necesitas información sobre nuestros
+                productos y servicios? Estamos para ayudarte.
+            </p>
+
+            <div class="contact-items">
+
+                <!-- TELÉFONO -->
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        📞
+                    </div>
+
+                    <h3>Teléfono</h3>
+
+                    <p>
+                        481 156 9624
+                    </p>
+
+                </div>
+
+
+                <!-- WHATSAPP -->
+                <div class="contact-item whatsapp-item">
+
+                    <div class="contact-icon whatsapp-icon">
+                        <img src="img/wspp.svg" alt="WhatsApp">
+                    </div>
+
+                    <h3>WhatsApp</h3>
+
+                    <p>
+                        Escríbenos directamente
+                    </p>
+
+                    <a
+                        href="https://wa.me/524811569624"
+                        class="btn-whatsapp"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        CONTACTAR
+                    </a>
+
+                </div>
+
+
+                <!-- CORREO -->
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        📧
+                    </div>
+
+                    <h3>Nuestros Correos</h3>
+
+                    <button
+                        class="btn-correo"
+                        id="btnCorreos">
+                        VER CORREOS
+                    </button>
+
+                    <div
+                        class="correos-ocultos"
+                        id="correos">
+
+                        <p>
+                            ventas@indagrovalles.com
+                        </p>
+
+                        <h5>
+                            (Venta, refacciones y equipos)
+                        </h5>
+
+                        <br>
+
+                        <p>
+                            servicios@indagrovalles.com
+                        </p>
+
+                        <h5>
+                            (Mantenimiento e instalaciones)
+                        </h5>
+
+                        <br>
+
+                        <p>
+                            facturas@indagrovalles.com
+                        </p>
+
+                        <h5>
+                            (Envío y recepción CFDI)
+                        </h5>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     FOOTER
+========================== -->
+
+    <footer class="footer">
+
+        <div class="logo">
+            <img src="img/esloganB.jpeg" alt="">
+        </div>
+
+        <p>
+            © IndAgro de Valles
+        </p>
+
+    </footer>
+
+    <!-- Conexión con JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

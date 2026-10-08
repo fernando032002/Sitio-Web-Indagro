@@ -1,0 +1,1603 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #8175ff;
+    color: #222;
+}
+
+
+/* =========================
+   TIPOS DE FUENTE
+========================= */
+
+/* TÍTULOS PRINCIPALES */
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-shadow: 4px 6px 4px rgb(0, 0, 0);
+}
+
+/* MENÚ */
+.nav a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+/* TÍTULOS DE SECCIONES */
+.section-title h2,
+.about h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+/* TÍTULOS DE PRODUCTOS */
+.service-detail h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+/* DESCRIPCIÓN DE PRODUCTOS */
+.service-detail > p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+/* INFORMACIÓN DE PRODUCTOS */
+
+.service-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(150, 15, 204, 0.821);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: 100%;
+    height: 90px;
+    padding: 10px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.689);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    border-bottom: 2px solid #612951;
+
+    box-shadow: 0 4px 20px rgba(29, 28, 32, 0.092);
+}
+
+
+/* =========================
+   LOGO A Y B
+========================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+
+    object-fit: contain;
+    display: block;
+
+    transition: 0.3s;
+}
+
+.logo img:hover {
+    transform: scale(1.08);
+}
+
+
+/* =========================
+   MENÚ
+========================= */
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav a {
+    text-decoration: none;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    padding: 11px 18px;
+
+    border: 2px solid #843f8f;
+    border-radius: 8px;
+
+    background: #000000ce;
+
+    transition: all 0.3s ease;
+}
+
+.nav a:hover {
+    background: #752180;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 6px 15px rgba(1, 1, 1, 0.2);
+}
+
+
+/* =========================
+   BOTÓN MENÚ MÓVIL
+========================= */
+
+.menu-btn {
+    display: none;
+
+    border: 2px solid #241d22;
+
+    background: #241d22;
+
+    color: #ffffff;
+
+    font-size: 25px;
+
+    padding: 7px 12px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.menu-btn:hover {
+    background: #842491;
+}
+
+/* =========================
+   INICIO / HERO
+========================= */
+/* TAMAÑO DEL INICIO */
+.hero {
+    min-height: 160vh;
+
+    padding: 90px 7% 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =========================
+   LOGO - MARCA DE AGUA
+========================= */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 1500px;
+    height: 1250px;
+
+    background-image: url("img/logoextra.jpeg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.90;
+
+    z-index: 0;
+}
+
+
+/* =========================
+   CONTENIDO DEL HERO
+========================= */
+
+.hero-content {
+    max-width: 1000px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+/* =========================
+   IMAGEN DEL ESLOGAN
+========================= */
+
+.hero-content img {
+    max-width: 550px;
+
+    width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+
+    filter: drop-shadow(
+        0 15px 25px rgba(0, 0, 0, 0.699)
+    );
+
+    transition: 0.2s;
+}
+
+.hero-content img:hover {
+    transform: scale(1.02);
+}
+
+
+.hero p {
+    font-size: 20px;
+
+    color: #ffffff;
+
+    margin: 25px 0 35px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background: #000000f6;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border: 2px solid #000000;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.96);
+}
+
+.btn:hover {
+    background: #151582cd;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 12px 25px rgba(77, 86, 155, 0.652);
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+.services,
+.about,
+.contact {
+    padding: 110px 7%;
+}
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+/* COLOR, TAMAÑO ETC DE LA LETRA "PRODUCTOS" */
+.section-title h2,
+.about h2 {
+    font-size: 44px;
+
+    font-weight: 800;
+
+    margin-bottom: 15px;
+
+    color: #7c136d;
+}
+
+.section-title h2::after,
+.about h2::after {
+    content: "";
+
+    display: block;
+
+    width: 70px;
+    height: 5px;
+
+    margin: 12px auto 0;
+
+    border-radius: 10px;
+
+    background: #000000;
+}
+
+
+/* =========================
+   PRODUCTOS
+========================= */
+
+.productos {
+    min-height: 100vh;
+
+    padding: 140px 7% 80px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #a2a1a1,
+            #ffffff
+        );
+
+    position: relative;
+}
+
+/* =========================
+   TARJETAS
+========================= */
+
+.cards {
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    min-height: 270px;
+
+    padding: 25px;
+
+    background: #0f4da4;
+
+    border: 10px solid #7c136d;
+
+    border-radius: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition: all 0.35s ease;
+
+    box-shadow:
+        0 20px 20px rgb(255, 255, 255);
+}
+
+
+/* línea superior */
+
+.card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 6px;
+
+    background: #ffffff;
+}
+
+
+/* imagen */
+
+.card img {
+    width: 145px;
+    height: 145px;
+
+    object-fit: contain;
+
+    display: block;
+
+    transition: 0.4s;
+}
+
+
+/* bordes de recuadro */
+
+.card:hover {
+    transform: translateY(-10px);
+
+    border-color: #7c136d;
+
+    box-shadow:
+        0 18px 35px rgba(0, 0, 0, 0.20);
+}
+
+
+/* zoom imagen */
+
+.card:hover img {
+    transform: scale(1.12);
+}
+
+
+/* información dentro del recuadro y color de texto*/
+
+.card .info-hover {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 16px;
+
+    background: rgb(255, 255, 255);
+
+    color: #202883;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    transition: 0.35s;
+}
+
+
+.card:hover .info-hover {
+    transform: translateY(0);
+}
+
+/* =========================
+   INFORMACIÓN SERVICIO
+========================= */
+
+.service-detail {
+    display: none;
+
+    max-width: 1400px;
+
+    margin: 50px auto 0;
+
+    padding: 50px;
+
+    background: #ffffff;
+
+    border: 2px solid #241d22;
+
+    border-radius: 50px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.18);
+
+    animation: aparecer 0.5s ease;
+}
+    /* =========================
+   IMAGEN PRINCIPAL PRODUCTO
+========================= */
+
+.product-main-image {
+    width: 100%;
+    max-width: 1100px;
+    height: 700px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #ffffff;
+    overflow: hidden;
+}
+
+
+/* Imagen dentro del recuadro */
+
+.product-main-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+
+/* =========================
+INFORMACION EN PROCESO
+========================= */
+
+.promotion {
+    padding: 120px 7%;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #f9f9fb
+        );
+
+    color: #000000;
+}
+
+
+.promotion-content {
+    max-width: 800px;
+
+    margin: auto;
+}
+
+
+.promotion h2 {
+    font-size: 48px;
+
+    margin-bottom: 20px;
+}
+
+
+.promotion p {
+    color: #eeeeee;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   NOSOTROS
+========================= */
+
+.about {
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =========================
+   LOGO - MARCA DE AGUA
+========================= */
+
+.about::before {
+    content: "";
+
+    position: absolute;
+
+    top: 60%;
+    left: 60%;
+
+    transform: translate(-84%, -58%);
+
+    width: 1200px;
+    height: 950px;
+
+    background-image: url("img/logoindagro.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 0.20;
+
+    z-index: 0;
+}
+
+
+/* =========================
+   CONTENIDO ABOUT ajuste de texto
+========================= */
+
+.about-content {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+.about-text {
+    padding: 20px;
+}
+
+
+.about h2 {
+    font-size: 45px;
+
+    margin-bottom: 25px;
+}
+
+
+.about h2::after {
+    margin-left: 0;
+}
+
+
+.about p {
+    color: #444;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+}
+
+/* =========================
+   CARRUSEL
+========================= */
+
+.about-carousel {
+    width: 100%;
+
+    max-width: 550px;
+
+    height: 350px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border: 3px solid #241d22;
+
+    border-radius: 25px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.18);
+}
+
+
+.carousel-container {
+    width: 100%;
+
+    height: 100%;
+
+    position: relative;
+}
+
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+
+    transition: opacity 0.7s ease;
+}
+
+
+.carousel-image.active {
+    opacity: 1;
+}
+
+
+/* =========================
+   BOTONES CARRUSEL
+========================= */
+
+.carousel-button {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 48px;
+    height: 48px;
+
+    border: 2px solid #000000;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.90);
+
+    color: #241d22;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 5;
+
+    transition: 0.3s;
+}
+
+
+.carousel-button:hover {
+    background: #842491;
+
+    color: #ffffff;
+
+    transform:
+        translateY(-50%)
+        scale(1.1);
+}
+
+
+.carousel-button.prev {
+    left: 15px;
+}
+
+
+.carousel-button.next {
+    right: 15px;
+}
+.card img {
+    width: 145px;
+    height: 145px;
+
+    object-fit: contain;
+
+    display: block;
+
+    transition: 0.4s;
+}
+
+.imagen-valores {
+    text-align: left; /* mueve la imagen hacia la izquierda */
+}
+
+.imagen-valores img {
+    width: 700px;     /* ajusta el tamaño */
+    height: auto;     /* mantiene la proporción */
+}
+/* =========================
+   CONTACTO
+========================= */
+.contact {
+padding: 120px 7%;
+
+background:
+    linear-gradient(
+        135deg,
+        #272c50,
+        #8175ff
+    );
+
+
+}
+
+.contact-container {
+max-width: 1100px;
+
+margin: auto;
+
+
+}
+
+.contact-info {
+background: #241d22;
+
+color: #ffffff;
+
+padding: 45px;
+
+border: 2px solid #000000;
+
+border-radius: 30px;
+
+box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.25);
+
+text-align: center;
+
+
+}
+
+.contact-info h2 {
+font-size: 42px;
+
+margin-bottom: 20px;
+
+
+}
+
+.contact-info > p {
+max-width: 650px;
+
+margin: 0 auto 45px;
+
+color: #dddddd;
+
+font-size: 17px;
+
+line-height: 1.7;
+
+
+}
+
+/* =========================
+TARJETAS DE CONTACTO
+========================= */
+
+.contact-items {
+display: grid;
+
+grid-template-columns:
+    repeat(3, 1fr);
+
+gap: 25px;
+
+width: 100%;
+
+
+}
+
+.contact-item {
+min-height: 220px;
+
+padding: 30px 20px;
+
+background: #ffffff;
+
+color: #241d22;
+
+border: 2px solid transparent;
+
+border-radius: 20px;
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: center;
+
+align-items: center;
+
+text-align: center;
+
+box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.15);
+
+transition: all 0.3s ease;
+
+
+}
+
+.contact-item:hover {
+transform: translateY(-8px);
+
+border-color: #842491;
+
+box-shadow:
+    0 18px 35px rgba(0, 0, 0, 0.25);
+
+
+}
+
+/* =========================
+ICONOS
+========================= */
+
+.contact-icon {
+width: 60px;
+
+height: 40px;
+
+margin-bottom: 15px;
+
+border-radius: 50%;
+
+background: #f1e6f4;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+font-size: 28px;
+
+
+}
+
+.whatsapp-icon {
+background: #dff8e8;
+}
+
+.whatsapp-icon img {
+width: 35px;
+
+height: 35px;
+
+object-fit: contain;
+
+
+}
+
+/* =========================
+TEXTOS
+========================= */
+
+.contact-item h3 {
+font-size: 21px;
+
+margin-bottom: 10px;
+
+color: #241d22;
+
+
+}
+
+.contact-item p {
+color: #555555;
+
+line-height: 1.6;
+
+word-break: break-word;
+
+
+}
+
+/* =========================
+WHATSAPP
+========================= */
+
+.whatsapp-item {
+border-color: #25D366;
+}
+
+.whatsapp-item:hover {
+border-color: #25D366;
+
+box-shadow:
+    0 18px 35px rgba(37, 211, 102, 0.25);
+
+
+}
+
+.btn-whatsapp {
+display: inline-block;
+
+margin-top: 18px;
+
+padding: 13px 28px;
+
+background: #25D366;
+
+color: #ffffff;
+
+text-decoration: none;
+
+border: 2px solid #25D366;
+
+border-radius: 10px;
+
+font-size: 15px;
+
+font-weight: bold;
+
+cursor: pointer;
+
+box-shadow:
+    0 6px 15px rgba(37, 211, 102, 0.30);
+
+transition: all 0.3s ease;
+
+
+}
+
+.btn-whatsapp:hover {
+background: #128C7E;
+
+border-color: #128C7E;
+
+transform: translateY(-4px);
+
+box-shadow:
+    0 10px 22px rgba(18, 140, 126, 0.40);
+
+
+}
+
+.btn-whatsapp:active {
+transform: translateY(-1px);
+}
+
+/* =========================
+CONTACTO RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+.contact {
+    padding: 80px 5%;
+}
+
+
+.contact-info {
+    padding: 35px 20px;
+}
+
+
+.contact-info h2 {
+    font-size: 32px;
+}
+
+
+.contact-items {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+}
+
+
+.contact-item {
+    min-height: 200px;
+}
+
+
+}
+/* =========================
+   CORREOS OCULTOS
+========================= */
+
+.correos-ocultos {
+    display: none;
+    margin-top: 15px;
+}
+
+.correos-ocultos.mostrar {
+    display: block;
+}
+
+.btn-correo {
+    margin-top: 15px;
+
+    padding: 10px 22px;
+
+    background: #362491;
+    color: #ffffff;
+
+    border: 2px solid #362491;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.btn-correo:hover {
+    background: #241d22;
+    border-color: #241d22;
+
+    transform: translateY(-3px);
+}
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    padding: 35px 7%;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.footer p {
+    color: #aaaaaa;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .header {
+        height: 75px;
+
+        padding: 10px 5%;
+    }
+
+
+    .logo img {
+        width: 65px;
+    }
+
+
+    .menu-btn {
+        display: block;
+    }
+
+
+    .nav {
+        display: none;
+
+        position: absolute;
+
+        top: 75px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px;
+
+        background: #ffffff;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 12px;
+
+        box-shadow:
+            0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+
+    .nav.active {
+        display: flex;
+    }
+
+
+    .nav a {
+        width: 90%;
+
+        text-align: center;
+    }
+
+
+    .hero {
+        padding: 110px 5% 60px;
+    }
+
+
+    .hero-content img {
+        max-width: 100%;
+    }
+
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    .about-content {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .about-carousel {
+        max-width: 100%;
+
+        height: 300px;
+    }
+
+
+    .service-detail {
+        padding: 30px 20px;
+    }
+
+
+    .service-detail h2 {
+        font-size: 30px;
+    }
+
+
+    .contact {
+        padding: 80px 5%;
+    }
+
+
+    .contact-info {
+        padding: 35px 25px;
+    }
+
+
+    .contact-info h2 {
+        font-size: 32px;
+    }
+
+
+    .promotion h2 {
+        font-size: 36px;
+    }
+
+
+    .footer {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .section-title h2,
+    .about h2 {
+        font-size: 34px;
+    }
+
+
+    .card {
+        min-height: 240px;
+    }
+
+
+    .card img {
+        width: 125px;
+        height: 125px;
+    }
+
+
+    .hero p {
+        font-size: 17px;
+    }
+/* =========================
+   DETALLE DE PRODUCTOS
+========================= */
+
+.service-detail {
+
+    display: none;
+
+    max-width: 1000px;
+
+    margin: 40px auto;
+
+    padding: 40px;
+
+    background: #ffffff;
+
+    border-radius: 25px;
+
+    border: 2px solid #241d22;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.20);
+
+    text-align: center;
+
+    animation: aparecerProducto 0.5s ease;
+
+}
+
+@keyframes aparecerProducto {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+.service-detail h2 {
+
+    color: #241d22;
+
+    font-size: 34px;
+
+    margin-bottom: 12px;
+
+}
+
+.service-detail > p {
+
+    color: #555;
+
+    font-size: 17px;
+
+    margin-bottom: 25px;
+
+}
+
+/* Imagen principal */
+
+.product-main-image {
+
+    width: 100%;
+
+    max-width: 600px;
+
+    height: 350px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #f4f4f4;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    border: 1px solid #ddd;
+
+}
+
+.product-main-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    padding: 15px;
+
+    transition: transform 0.3s ease;
+
+}
+
+.product-main-image img:hover {
+
+    transform: scale(1.04);
+
+}
+
+/* Galería */
+
+.product-gallery {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin: 20px 0 35px;
+
+}
+
+.gallery-image {
+
+    width: 100px;
+
+    height: 80px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    border: 3px solid transparent;
+
+    cursor: pointer;
+
+    background: #f4f4f4;
+
+    padding: 4px;
+
+    transition: 0.3s ease;
+
+}
+
+.gallery-image:hover {
+
+    transform: scale(1.08);
+
+    border-color: #842491;
+
+}
+
+.gallery-image.selected {
+
+    border-color: #9d2163;
+
+    box-shadow: 0 0 10px rgba(157, 33, 99, 0.5);
+
+}
+
+/* Información */
+
+.service-content {
+
+    margin-top: 20px;
+
+    padding: 25px;
+
+    background: #f7f7f7;
+
+    border-left: 6px solid #9d2163;
+
+    border-radius: 12px;
+
+    text-align: left;
+
+}
+
+.service-content h3 {
+
+    color: #241d22;
+
+    margin-bottom: 12px;
+
+    font-size: 22px;
+
+}
+
+.service-content p {
+
+    color: #444;
+
+    line-height: 1.7;
+
+}
+
+/* Botón */
+
+#backServices {
+
+    margin-top: 30px;
+
+}
+
+/* Diseño responsive */
+
+@media (max-width: 600px) {
+
+    .service-detail {
+
+        padding: 25px 15px;
+
+        margin: 25px 10px;
+
+    }
+
+    .service-detail h2 {
+
+        font-size: 26px;
+
+    }
+
+    .product-main-image {
+
+        height: 250px;
+
+    }
+
+    .gallery-image {
+
+        width: 80px;
+
+        height: 65px;
+
+    }
+
+}
+}
