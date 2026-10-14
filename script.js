@@ -39,27 +39,72 @@ navLinks.forEach(link => {
    ELEMENTOS DE PRODUCTOS
 ========================= */
 
-const cards =
-    document.querySelectorAll(".card");
+/* =========================
+   ABRIR DETALLE DE PRODUCTOS
+========================= */
 
-const serviceDetail =
-    document.getElementById("serviceDetail");
+const cards = document.querySelectorAll(".producto-card");
 
-const serviceTitle =
-    document.getElementById("serviceTitle");
+cards.forEach(card => {
 
-const serviceDescription =
-    document.getElementById("serviceDescription");
+    const boton = card.querySelector(".producto-boton");
 
-const serviceImage =
-    document.getElementById("serviceImage");
+    if (!boton) return;
 
-const serviceText =
-    document.getElementById("serviceText");
+    boton.addEventListener("click", () => {
 
-const backServices =
-    document.getElementById("backServices");
+        // Obtener el producto desde el botón
+        const clave = boton.dataset.producto;
 
+        // Buscar su información
+        const servicio = servicios[clave];
+
+        if (!servicio) {
+            console.error("No se encontró el producto:", clave);
+            return;
+        }
+
+        // Verificar elementos del detalle
+        if (
+            !serviceDetail ||
+            !serviceTitle ||
+            !serviceDescription ||
+            !serviceImage ||
+            !serviceText
+        ) {
+            console.error("Faltan elementos del detalle en el HTML.");
+            return;
+        }
+
+        // Mostrar información
+        serviceTitle.textContent = servicio.titulo;
+        serviceDescription.textContent = servicio.descripcion;
+        serviceText.textContent = servicio.informacion;
+
+        // Mostrar imagen del producto
+        serviceImage.src = servicio.imagenPrincipal;
+        serviceImage.alt = servicio.titulo;
+
+        // Abrir el detalle
+        serviceDetail.style.display = "block";
+
+        // Desplazarse al detalle
+        setTimeout(() => {
+
+            const posicion =
+                serviceDetail.getBoundingClientRect().top +
+                window.scrollY - 110;
+
+            window.scrollTo({
+                top: posicion,
+                behavior: "smooth"
+            });
+
+        }, 100);
+
+    });
+
+});
 /* =========================
    INFORMACIÓN DE PRODUCTOS
 ========================= */
@@ -133,74 +178,61 @@ const servicios = {
 
 };
 
+/* =========================
+   ABRIR DETALLE DE PRODUCTOS
+========================= */
+
 cards.forEach(card => {
 
-    card.addEventListener("click", () => {
+    const boton = card.querySelector(".producto-boton");
 
-        const servicioSeleccionado =
-            card.dataset.servicio;
+    if (!boton) return;
 
-        const servicio =
-            servicios[servicioSeleccionado];
+    boton.addEventListener("click", () => {
 
-
-        /* Verificar que exista */
+        const servicioSeleccionado = card.dataset.servicio;
+        const servicio = servicios[servicioSeleccionado];
 
         if (!servicio) {
-
-            console.error(
-                "No existe información para:",
-                servicioSeleccionado
-            );
-
+            console.error("No existe información para:", servicioSeleccionado);
             return;
         }
 
+        // Verificar que existan los elementos del detalle
+        if (
+            !serviceDetail ||
+            !serviceTitle ||
+            !serviceDescription ||
+            !serviceImage ||
+            !serviceText
+        ) {
+            console.error("Faltan elementos HTML del detalle del producto.");
+            return;
+        }
 
-        /* =========================
-           INFORMACIÓN
-        ========================= */
+        // Actualizar información
+        serviceTitle.textContent = servicio.titulo;
+        serviceDescription.textContent = servicio.descripcion;
+        serviceText.textContent = servicio.informacion;
 
-        serviceTitle.textContent =
-            servicio.titulo;
+        // Mostrar una sola imagen
+        serviceImage.src = servicio.imagenPrincipal;
+        serviceImage.alt = servicio.titulo;
 
-        serviceDescription.textContent =
-            servicio.descripcion;
+        // Mostrar detalle
+        serviceDetail.style.display = "block";
 
-        serviceText.textContent =
-            servicio.informacion;
-
-
-        /* =========================
-           ÚNICA IMAGEN
-        ========================= */
-
-        serviceImage.src =
-            servicio.imagenPrincipal;
-
-        serviceImage.alt =
-            servicio.titulo;
-
-
-        /* =========================
-           MOSTRAR DETALLE
-        ========================= */
-
-        serviceDetail.style.display =
-            "block";
-
-
-        /* =========================
-           BAJAR AL DETALLE
-        ========================= */
-/* acomodo de los recuadros*/
+        // Desplazarse al detalle sin ocultarlo bajo el encabezado fijo
         setTimeout(() => {
 
+            const posicion =
+                serviceDetail.getBoundingClientRect().top +
+                window.scrollY -
+                110;
+
             window.scrollTo({
-                top: serviceDetail.offsetTop +1050,
-
-                behavior: "smooth",
-
+                top: posicion,
+                behavior: "smooth"
             });
 
         }, 100);
@@ -208,7 +240,6 @@ cards.forEach(card => {
     });
 
 });
-
 
 /* =========================
    REGRESAR A PRODUCTOS
@@ -226,7 +257,7 @@ if (backServices && serviceDetail) {
 
             const servicesSection =
                 document.getElementById(
-                    "servicios"
+                    "productos"
                 );
 
 
