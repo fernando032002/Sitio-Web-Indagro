@@ -14,7 +14,7 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #8175ff;
+    background: #ffffff;
     color: #222;
 }
 
@@ -373,7 +373,7 @@ h1, h2 {
 
 .productos {
     padding: 100px 4% 90px;
-    background: linear-gradient(135deg, #f7f9ff, #e9eff9);
+    background: linear-gradient(135deg, #dfe3f0, #e9eff9);
     position: relative;
     overflow: hidden;
 }
