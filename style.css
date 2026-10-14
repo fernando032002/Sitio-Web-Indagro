@@ -27,7 +27,7 @@ body {
 h1, h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    text-shadow: 4px 6px 4px rgb(255, 255, 255);
+    text-shadow: 4px 2px 4px rgb(56, 55, 55);
 }
 
 /* MENÚ */
@@ -983,7 +983,7 @@ INFORMACION EN PROCESO
     height: auto;     /* mantiene la proporción */
 }
 /* =========================
-   CONTACTO
+   CONTACTOS
 ========================= */
 .contact {
 padding: 120px 7%;
@@ -1069,7 +1069,7 @@ min-height: 220px;
 
 padding: 30px 20px;
 
-background: #ffffff;
+background: #3f40499a;
 
 color: #241d22;
 
@@ -1098,10 +1098,10 @@ transition: all 0.3s ease;
 .contact-item:hover {
 transform: translateY(-8px);
 
-border-color: #842491;
+border-color: #8c2b93;
 
 box-shadow:
-    0 18px 35px rgba(0, 0, 0, 0.25);
+    0 18px 35px rgba(143, 40, 169, 0.315);
 
 
 }
@@ -1155,13 +1155,13 @@ font-size: 21px;
 
 margin-bottom: 10px;
 
-color: #241d22;
+color: #000000;
 
 
 }
 
 .contact-item p {
-color: #555555;
+color: #ffffff;
 
 line-height: 1.6;
 
@@ -1311,22 +1311,176 @@ CONTACTO RESPONSIVE
 /* =========================
    FOOTER
 ========================= */
+
+
 .footer {
-    padding: 35px 7%;
-
-    background: #111111;
-
+    background: linear-gradient(135deg, #09264a, #172c55);
     color: #ffffff;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
+    margin-top: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
-.footer p {
-    color: #aaaaaa;
+/* CONTENEDOR DE LAS CUATRO COLUMNAS */
+
+.footer-contenedor {
+    max-width: 1500px;
+    margin: auto;
+    padding: 60px 6% 45px;
+
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.2fr 1fr;
+    gap: 40px;
+}
+
+/* COLUMNAS */
+
+.footer-columna {
+    min-width: 0;
+}
+
+.footer-columna h3 {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 22px;
+    position: relative;
+}
+
+/* LÍNEA DECORATIVA */
+
+.footer-columna h3::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    background: #8b5cf6;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* LOGO */
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 18px;
+}
+
+.footer-logo img {
+    display: block;
+    width: 190px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* TEXTOS */
+
+.footer-columna p {
+    color: #d2dced;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 12px;
+}
+
+.footer-columna p span {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* ENLACES */
+
+.footer-columna ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-columna ul li {
+    margin-bottom: 13px;
+}
+
+.footer-columna a {
+    color: #d2dced;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    overflow-wrap: anywhere;
+}
+
+.footer-columna a:hover {
+    color: #b8a0ff;
+}
+
+/* REDES SOCIALES */
+
+.footer-redes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.footer-redes a {
+    display: inline-block;
+    padding: 9px 16px;
+    border: 1px solid #8b5cf6;
+    border-radius: 25px;
+    color: #ffffff;
+    transition: background 0.3s ease,
+                transform 0.3s ease;
+}
+
+.footer-redes a:hover {
+    background: #6d43cf;
+    transform: translateY(-3px);
+}
+
+/* FRANJA INFERIOR */
+
+.footer-inferior {
+    padding: 20px 6%;
+    text-align: center;
+    background: #061a33;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-inferior p {
+    color: #c6d3e5;
+    font-size: 13px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+    .footer-contenedor {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px;
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 550px) {
+    .footer-contenedor {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 45px 8% 35px;
+    }
+
+    .footer-logo img {
+        width: 170px;
+    }
+
+    .footer-columna h3 {
+        font-size: 18px;
+    }
+
+    .footer-inferior {
+        padding: 18px 7%;
+    }
 }
 
 
