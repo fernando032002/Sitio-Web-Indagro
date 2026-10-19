@@ -991,8 +991,8 @@ padding: 120px 7%;
 background:
     linear-gradient(
         135deg,
-        #272c50,
-        #8175ff
+        #9399bad0,
+        #7d8082d8
     );
 
 
@@ -1330,7 +1330,7 @@ CONTACTO RESPONSIVE
 
 
 .footer {
-    background: linear-gradient(135deg, #09264a, #172c55);
+    background: linear-gradient(135deg, #09264a, #344361);
     color: #ffffff;
     margin-top: 0;
     font-family: 'Poppins', sans-serif;
