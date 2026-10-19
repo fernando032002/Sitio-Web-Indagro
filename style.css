@@ -463,13 +463,13 @@ h1, h2 {
 }
 
 .producto-card.automatizacion {
-    --color: #00a8ed;
-    --oscuro: #003c59;
+    --color: #9aacb4;
+    --oscuro: #48545a;
 }
 
-.producto-card.neumatica {
-    --color: #a919a8;
-    --oscuro: #401044;
+.producto-card.servicios {
+    --color: #e2e515ce;
+    --oscuro: #818714;
 }
 
 /* IMAGEN */
