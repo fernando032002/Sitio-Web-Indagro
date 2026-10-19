@@ -1069,7 +1069,7 @@ min-height: 220px;
 
 padding: 30px 20px;
 
-background: #3f40499a;
+background: #7678889a;
 
 color: #241d22;
 
@@ -1096,15 +1096,9 @@ transition: all 0.3s ease;
 }
 
 .contact-item:hover {
-transform: translateY(-8px);
-
-border-color: #8c2b93;
-
-box-shadow:
-    0 18px 35px rgba(143, 40, 169, 0.315);
-
-
+    transform: translateY(-8px);
 }
+
 
 /* =========================
 ICONOS
@@ -1170,22 +1164,44 @@ word-break: break-word;
 
 }
 
+
 /* =========================
-WHATSAPP
+   BORDES DE LAS TARJETAS
 ========================= */
 
+/* TELÉFONO */
+.telefono-item {
+    border: 2px solid #b739d6;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.telefono-item:hover {
+    border-color: #e100ff;
+    box-shadow: 0 10px 25px rgba(217, 0, 255, 0.3);
+}
+
+/* WHATSAPP */
 .whatsapp-item {
-border-color: #25D366;
+    border: 2px solid #25D366;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .whatsapp-item:hover {
-border-color: #25D366;
-
-box-shadow:
-    0 18px 35px rgba(37, 211, 102, 0.25);
-
-
+    border-color: #00ff1a;
+    box-shadow: 0 10px 25px rgba(0, 255, 26, 0.3);
 }
+
+/* CORREO */
+.correo-item {
+    border: 2px solid #544dce;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.correo-item:hover {
+    border-color: #2200ff;
+    box-shadow: 0 10px 25px rgba(0, 85, 255, 0.3);
+}
+
 
 .btn-whatsapp {
 display: inline-block;
@@ -1194,13 +1210,13 @@ margin-top: 18px;
 
 padding: 13px 28px;
 
-background: #25D366;
+background: #20c45c;
 
 color: #ffffff;
 
 text-decoration: none;
 
-border: 2px solid #25D366;
+border: 2px solid #20be42;
 
 border-radius: 10px;
 
@@ -1211,7 +1227,7 @@ font-weight: bold;
 cursor: pointer;
 
 box-shadow:
-    0 6px 15px rgba(37, 211, 102, 0.30);
+    0 6px 15px rgba(30, 182, 86, 0.3);
 
 transition: all 0.3s ease;
 
@@ -1219,14 +1235,14 @@ transition: all 0.3s ease;
 }
 
 .btn-whatsapp:hover {
-background: #128C7E;
+background: #148e3e;
 
-border-color: #128C7E;
+border-color: #21a849;
 
 transform: translateY(-4px);
 
 box-shadow:
-    0 10px 22px rgba(18, 140, 126, 0.40);
+    0 10px 22px rgba(18, 140, 47, 0.4);
 
 
 }
