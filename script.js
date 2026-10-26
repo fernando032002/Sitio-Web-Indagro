@@ -34,11 +34,6 @@ navLinks.forEach(link => {
 
 });
 
-
-/* =========================
-   ELEMENTOS DE PRODUCTOS
-========================= */
-
 /* =========================
    ABRIR DETALLE DE PRODUCTOS
 ========================= */
