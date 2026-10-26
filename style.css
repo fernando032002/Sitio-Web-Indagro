@@ -716,51 +716,6 @@ h1, h2 {
     display: block;
 }
 
-
-
-/* =========================
-INFORMACION EN PROCESO
-========================= */
-
-.promotion {
-    padding: 120px 7%;
-
-    text-align: center;
-
-    background:
-        linear-gradient(
-            135deg,
-            #ffffff,
-            #f9f9fb
-        );
-
-    color: #000000;
-}
-
-
-.promotion-content {
-    max-width: 800px;
-
-    margin: auto;
-}
-
-
-.promotion h2 {
-    font-size: 48px;
-    
-    margin-bottom: 20px;
-}
-
-
-.promotion p {
-    color: #eeeeee;
-
-    font-size: 18px;
-
-    margin-bottom: 30px;
-}
-
-
 /* =========================
    NOSOTROS
 ========================= */
