@@ -449,22 +449,22 @@ h1, h2 {
 
 .producto-card.control {
     --color: #0879e5;
-    --oscuro: #717f94;
+    --oscuro: #05234d;
 }
 
 .producto-card.potencia {
     --color: #c52ac5;
-    --oscuro: #3d1049;
+    --oscuro: #32063c;
 }
 
 .producto-card.hidraulica {
     --color: #00b77a;
-    --oscuro: #004b38;
+    --oscuro: #033d2e;
 }
 
 .producto-card.automatizacion {
     --color: #9aacb4;
-    --oscuro: #48545a;
+    --oscuro: #323638;
 }
 
 .producto-card.servicios {
@@ -721,7 +721,7 @@ h1, h2 {
 ========================= */
 
 .about {
-    background: #ffffff;
+    background: #d3d3d3ae;
     position: relative;
     overflow: hidden;
 }
@@ -804,130 +804,352 @@ h1, h2 {
     margin-bottom: 20px;
 }
 
-/* =========================
-   CARRUSEL
-========================= */
+/* ==================================
+   SECCIÓN NOSOTROS - INDAGRO
+================================== */
 
-.about-carousel {
-    width: 100%;
+.nosotros-page {
+    background: #ffffff;
+    color: #263b57;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 65px;
+    scroll-margin-top: 90px;
+}
 
-    max-width: 550px;
+/* BANNER PRINCIPAL */
 
-    height: 350px;
-
+.nosotros-banner {
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    padding: 40px 8%;
     position: relative;
-
     overflow: hidden;
 
-    border: 3px solid #241d22;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10, 48, 105, 0.96),
+            rgba(15, 77, 164, 0.78),
+            rgba(15, 77, 164, 0.12)
+        ),
+        url("img/nosotros-banner.jpg");
 
-    border-radius: 25px;
-
-    background: #ffffff;
-
-    box-shadow:
-        0 20px 40px rgba(0, 0, 0, 0.18);
+    background-size: cover;
+    background-position: center;
 }
 
-
-.carousel-container {
-    width: 100%;
-
-    height: 100%;
-
+.nosotros-banner-content {
     position: relative;
+    z-index: 1;
 }
 
+.nosotros-banner h1 {
+    color: #ffffff;
+    font-size: clamp(32px, 4vw, 46px);
+    margin: 0 0 12px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
 
-.carousel-image {
-    width: 100%;
-    height: 100%;
+.nosotros-banner p {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin: 0;
+    color: #ffffff;
+    font-size: 15px;
+}
 
-    object-fit: cover;
+.nosotros-banner a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
+.nosotros-banner a:hover {
+    color: #c4d7ff;
+}
+
+/* CONTENEDOR */
+
+.nosotros-container {
+    width: 88%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* PRESENTACIÓN DE LA EMPRESA */
+
+.empresa-presentacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    padding: 55px 0 45px;
+}
+
+.empresa-imagen {
+    position: relative;
+    padding: 12px;
+}
+
+.empresa-imagen::before {
+    content: "";
     position: absolute;
-
     top: 0;
     left: 0;
-
-    opacity: 0;
-
-    transition: opacity 0.7s ease;
+    width: 85px;
+    height: 85px;
+    background: #4c82ff;
+    border-radius: 15px;
+    z-index: 0;
 }
 
-
-.carousel-image.active {
-    opacity: 1;
-}
-
-
-/* =========================
-   BOTONES CARRUSEL
-========================= */
-
-.carousel-button {
+.empresa-imagen::after {
+    content: "";
     position: absolute;
-
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    width: 48px;
-    height: 48px;
-
-    border: 2px solid #000000;
-
-    border-radius: 50%;
-
-    background: rgba(255, 255, 255, 0.90);
-
-    color: #241d22;
-
-    font-size: 24px;
-
-    cursor: pointer;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    z-index: 5;
-
-    transition: 0.3s;
+    right: 0;
+    bottom: 0;
+    width: 65px;
+    height: 65px;
+    background: #8175ff;
+    border-radius: 15px;
+    z-index: 0;
 }
 
-
-.carousel-button:hover {
-    background: #842491;
-
-    color: #ffffff;
-
-    transform:
-        translateY(-50%)
-        scale(1.1);
-}
-
-
-.carousel-button.prev {
-    left: 15px;
-}
-
-
-.carousel-button.next {
-    right: 15px;
-}
-.card img {
-    width: 145px;
-    height: 145px;
-
-    object-fit: contain;
-
+.empresa-imagen img {
     display: block;
-
-    transition: 0.4s;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(15, 50, 100, 0.12);
 }
+
+.empresa-texto {
+    min-width: 0;
+}
+
+.empresa-etiqueta {
+    display: inline-block;
+    color: #6a20b5;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.empresa-etiqueta::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 4px;
+    background: #6a20b5;
+    margin: 0 12px 4px 0;
+}
+
+.empresa-texto h2 {
+    color: #12366c;
+    font-size: clamp(28px, 3vw, 38px);
+    line-height: 1.2;
+    margin: 0 0 18px;
+}
+
+.empresa-texto p {
+    color: #40546c;
+    font-size: 15px;
+    line-height: 1.85;
+    margin: 0 0 14px;
+    text-align: left;
+}
+
+/* TARJETAS DE HISTORIA, MISIÓN Y VISIÓN */
+
+.nosotros-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 5px;
+}
+
+.nosotros-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 25px 22px;
+    border-radius: 16px;
+    border: 1px solid transparent;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.historia-card {
+    background: #f7f3fc;
+    border-color: #eee4fa;
+}
+
+.mision-card {
+    background: #f0f6ff;
+    border-color: #e1edff;
+}
+
+.vision-card {
+    background: #f0f9f6;
+    border-color: #dcefe8;
+}
+
+.historia-card:hover {
+    border-color: #7824a8;
+    box-shadow: 0 12px 28px rgba(120, 36, 168, 0.12);
+    transform: translateY(-5px);
+}
+
+.mision-card:hover {
+    border-color: #2864ed;
+    box-shadow: 0 12px 28px rgba(40, 100, 237, 0.12);
+    transform: translateY(-5px);
+}
+
+.vision-card:hover {
+    border-color: #23986a;
+    box-shadow: 0 12px 28px rgba(35, 152, 106, 0.12);
+    transform: translateY(-5px);
+}
+
+/* ICONOS */
+
+.nosotros-icono {
+    flex: 0 0 65px;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.historia-card .nosotros-icono {
+    background: #7020a5;
+}
+
+.mision-card .nosotros-icono {
+    background: #2864ed;
+}
+
+.vision-card .nosotros-icono {
+    background: #23986a;
+}
+
+/* TEXTO DE LAS TARJETAS */
+
+.nosotros-card-contenido {
+    flex: 1;
+    min-width: 0;
+}
+
+.nosotros-card h3 {
+    color: #12366c;
+    font-size: 23px;
+    margin: 13px 0 18px;
+}
+
+.nosotros-card p {
+    color: #40546c;
+    font-size: 13px;
+    line-height: 1.9;
+    margin: 0;
+}
+
+/* TABLETAS */
+
+@media (max-width: 1050px) {
+    .nosotros-container {
+        width: 92%;
+    }
+
+    .empresa-presentacion {
+        gap: 30px;
+    }
+
+    .empresa-imagen img {
+        height: 290px;
+    }
+
+    .nosotros-tarjetas {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .nosotros-card {
+        padding: 25px;
+    }
+
+    .nosotros-card p {
+        font-size: 14px;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 700px) {
+    .nosotros-banner {
+        min-height: 170px;
+        padding: 30px 6%;
+        background-position: center;
+    }
+
+    .nosotros-container {
+        width: 90%;
+    }
+
+    .empresa-presentacion {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 35px 0;
+    }
+
+    .empresa-imagen img {
+        height: 250px;
+    }
+
+    .empresa-texto h2 {
+        font-size: 29px;
+    }
+
+    .empresa-texto p {
+        font-size: 14px;
+    }
+
+    .nosotros-card {
+        gap: 15px;
+        padding: 20px 16px;
+    }
+
+    .nosotros-icono {
+        flex-basis: 50px;
+        width: 50px;
+        height: 50px;
+        font-size: 29px;
+    }
+
+    .nosotros-card h3 {
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 12px;
+    }
+
+    .nosotros-card p {
+        font-size: 13px;
+    }
+}
+
+
 
 .imagen-valores {
     text-align: left; /* mueve la imagen hacia la izquierda */
