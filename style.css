@@ -893,30 +893,6 @@ h1, h2 {
     padding: 12px;
 }
 
-.empresa-imagen::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 85px;
-    height: 85px;
-    background: #4c82ff;
-    border-radius: 15px;
-    z-index: 0;
-}
-
-.empresa-imagen::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 65px;
-    height: 65px;
-    background: #8175ff;
-    border-radius: 15px;
-    z-index: 0;
-}
-
 .empresa-imagen img {
     display: block;
     position: relative;
@@ -1131,7 +1107,7 @@ h1, h2 {
 
 
 .imagen-valores {
-    text-align: left; /* mueve la imagen hacia la izquierda */
+    text-align: center/* mueve la imagen hacia la izquierda */
 }
 
 .imagen-valores img {
