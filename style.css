@@ -980,10 +980,7 @@ h1, h2 {
     padding: 25px 22px;
     border-radius: 16px;
     border: 1px solid transparent;
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        border-color 0.3s ease;
+  
 }
 
 .historia-card {
@@ -999,24 +996,6 @@ h1, h2 {
 .vision-card {
     background: #f0f9f6;
     border-color: #dcefe8;
-}
-
-.historia-card:hover {
-    border-color: #7824a8;
-    box-shadow: 0 12px 28px rgba(120, 36, 168, 0.12);
-    transform: translateY(-5px);
-}
-
-.mision-card:hover {
-    border-color: #2864ed;
-    box-shadow: 0 12px 28px rgba(40, 100, 237, 0.12);
-    transform: translateY(-5px);
-}
-
-.vision-card:hover {
-    border-color: #23986a;
-    box-shadow: 0 12px 28px rgba(35, 152, 106, 0.12);
-    transform: translateY(-5px);
 }
 
 /* ICONOS */
