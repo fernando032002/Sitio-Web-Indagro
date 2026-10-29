@@ -22,9 +22,23 @@ body {
 /* =========================
    TIPOS DE FUENTE
 ========================= */
+/* NASALIZATION */
+
+
+@font-face {
+    font-family: 'Nasalization';
+    src: url('fonts/nasalization-rg.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h2 {
+    font-family: 'Nasalization', sans-serif;
+}
+
 
 /* TÍTULOS PRINCIPALES */
-h1, h2 {
+h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-shadow: 4px 2px 4px rgb(56, 55, 55);
@@ -37,14 +51,14 @@ h1, h2 {
 }
 
 /* TÍTULOS DE SECCIONES */
-.section-title h2,
-.about h2 {
+.section-title h1,
+.about h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
 }
 
 /* TÍTULOS DE PRODUCTOS */
-.service-detail h2 {
+.service-detail h1 {
     font-family: 'Montserrat', sans-serif;
     font-size: 50px;
     font-weight: 800;
@@ -720,29 +734,25 @@ h1, h2 {
    NOSOTROS
 ========================= */
 
-.about {
-    background: #d3d3d3ae;
+/* SECCIONES CON MARCA DE AGUA */
+.about,
+.nosotros-page {
     position: relative;
-    overflow: hidden;
+    isolation: isolate;
 }
 
-
-/* =========================
-   LOGO - MARCA DE AGUA
-========================= */
-
-.about::before {
+/* LOGO - MARCA DE AGUA */
+.about::before,
+.nosotros-page::before {
     content: "";
-
     position: absolute;
 
-    top: 60%;
-    left: 60%;
+    top: 35%;
+    left: 70%;
+    transform: translate(-50%, -50%);
 
-    transform: translate(-84%, -58%);
-
-    width: 1200px;
-    height: 950px;
+    width: min(90%, 900px);
+    height: 600px;
 
     background-image: url("img/logoindagro.png");
     background-size: contain;
@@ -750,8 +760,8 @@ h1, h2 {
     background-repeat: no-repeat;
 
     opacity: 0.20;
-
-    z-index: 0;
+    z-index: -1;
+    pointer-events: none;
 }
 
 
@@ -935,9 +945,9 @@ h1, h2 {
 .empresa-texto p {
     color: #40546c;
     font-size: 15px;
-    line-height: 1.85;
+    line-height: 2.00;
     margin: 0 0 14px;
-    text-align: left;
+    text-align: justify;
 }
 
 /* TARJETAS DE HISTORIA, MISIÓN Y VISIÓN */
@@ -962,16 +972,19 @@ h1, h2 {
 .historia-card {
     background: #f7f3fc;
     border-color: #eee4fa;
+    text-align: justify;
 }
 
 .mision-card {
     background: #f0f6ff;
     border-color: #e1edff;
+    text-align: justify;
 }
 
 .vision-card {
     background: #f0f9f6;
     border-color: #dcefe8;
+    text-align: justify;
 }
 
 /* ICONOS */
