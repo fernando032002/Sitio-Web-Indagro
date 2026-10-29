@@ -747,12 +747,12 @@ h1 {
     content: "";
     position: absolute;
 
-    top: 35%;
+    top: 33%;
     left: 70%;
     transform: translate(-50%, -50%);
 
     width: min(90%, 900px);
-    height: 600px;
+    height: 500px;
 
     background-image: url("img/logoindagro.png");
     background-size: contain;
