@@ -139,7 +139,7 @@ const servicios = {
             "Soluciones y servicios especializados en sistemas hidráulicos.",
 
         imagenPrincipal:
-            "img/hidraulica.jpg",
+            "img/hidraulica.",
 
         informacion:
             "Trabajamos con sistemas hidráulicos, equipos, componentes y soluciones."
@@ -159,16 +159,16 @@ const servicios = {
     },
 
     neumatica: {
-        titulo: "NEUMÁTICA",
+        titulo: "SERVICIOS",
 
         descripcion:
-            "Soluciones para sistemas y equipos neumáticos.",
+            "Servicios",
 
         imagenPrincipal:
-            "img/neumatica.jpg",
+            "img/",
 
         informacion:
-            "Ofrecemos soluciones para sistemas neumáticos, equipos, componentes y aplicaciones industriales."
+            "....."
     }
 
 };
