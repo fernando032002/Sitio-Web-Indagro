@@ -155,7 +155,7 @@ h1 {
     border: 2px solid #843f8f;
     border-radius: 8px;
 
-    background: #000000ce;
+    background: #767676ce;
 
     transition: all 0.3s ease;
 }
@@ -165,7 +165,7 @@ h1 {
 
     transform: translateY(-3px);
 
-    box-shadow: 0 6px 15px rgba(1, 1, 1, 0.2);
+    box-shadow: 0 6px 15px rgba(230, 221, 221, 0.318);
 }
 
 
