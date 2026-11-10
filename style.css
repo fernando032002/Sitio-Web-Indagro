@@ -1474,8 +1474,8 @@ CONTACTO RESPONSIVE
 
 
 .footer {
-    background: linear-gradient(135deg, #09264a, #344361);
-    color: #ffffff;
+    background: linear-gradient(135deg, #ffffff, #344361);
+    color: #8e8e8e;
     margin-top: 0;
     font-family: 'Poppins', sans-serif;
 }
@@ -1514,7 +1514,7 @@ CONTACTO RESPONSIVE
     display: block;
     width: 45px;
     height: 3px;
-    background: #8b5cf6;
+    background: #5a37ac;
     border-radius: 5px;
     margin-top: 10px;
 }
@@ -1528,7 +1528,7 @@ CONTACTO RESPONSIVE
 
 .footer-logo img {
     display: block;
-    width: 190px;
+    width: 300px;
     max-width: 100%;
     height: auto;
     object-fit: contain;
@@ -1537,7 +1537,7 @@ CONTACTO RESPONSIVE
 /* TEXTOS */
 
 .footer-columna p {
-    color: #d2dced;
+    color: #000000;
     font-size: 14px;
     line-height: 1.9;
     margin-bottom: 12px;
@@ -1561,7 +1561,7 @@ CONTACTO RESPONSIVE
 }
 
 .footer-columna a {
-    color: #d2dced;
+    color: #000000;
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s ease;
@@ -1569,7 +1569,7 @@ CONTACTO RESPONSIVE
 }
 
 .footer-columna a:hover {
-    color: #b8a0ff;
+    color: #998ed3;
 }
 
 /* REDES SOCIALES */
@@ -1584,7 +1584,7 @@ CONTACTO RESPONSIVE
 .footer-redes a {
     display: inline-block;
     padding: 9px 16px;
-    border: 1px solid #8b5cf6;
+    border: 1px solid #4c15cb;
     border-radius: 25px;
     color: #ffffff;
     transition: background 0.3s ease,
