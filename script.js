@@ -120,7 +120,7 @@ const servicios = {
     },
 
     potencia: {
-        titulo: "POTENCIA ELÉCTRICA",
+        titulo: "POTENCIA",
 
         descripcion:
             "Servicios relacionados con sistemas de potencia eléctrica.",
@@ -273,150 +273,79 @@ if (backServices && serviceDetail) {
 
 }
 
-/* =========================
-   CARRUSEL NOSOTROS
-========================= */
+/* ==================================
+   CARRUSEL AUTOMÁTICO - NOSOTROS
+================================== */
 
-const imagenesNosotros =
-    document.querySelectorAll(
-        ".carousel-image"
-    );
+const carrusel = document.querySelector('.nosotros-carousel');
 
-const botonAnterior =
-    document.getElementById(
-        "prevAbout"
-    );
+if (carrusel) {
 
-const botonSiguiente =
-    document.getElementById(
-        "nextAbout"
-    );
+    const track = carrusel.querySelector('.carousel-track');
+    const slides = carrusel.querySelectorAll('.carousel-slide');
+    const anterior = carrusel.querySelector('.carousel-btn.prev');
+    const siguiente = carrusel.querySelector('.carousel-btn.next');
+    const indicadores = carrusel.querySelectorAll('.carousel-indicators button');
 
+    let indice = 0;
+    let intervalo;
 
-let indiceNosotros = 0;
+    // Mostrar imagen
+    function mostrarImagen(posicion) {
 
+        indice = (posicion + slides.length) % slides.length;
 
-/* =========================
-   MOSTRAR IMAGEN
-========================= */
+        track.style.transform = `translateX(-${indice * 100}%)`;
 
-function mostrarImagenNosotros(indice) {
-
-    imagenesNosotros.forEach(
-        imagen => {
-
-            imagen.classList.remove(
-                "active"
-            );
-
-        }
-    );
-
-
-    if (imagenesNosotros[indice]) {
-
-        imagenesNosotros[indice]
-            .classList.add("active");
+        indicadores.forEach((boton, i) => {
+            boton.classList.toggle('active', i === indice);
+        });
 
     }
 
-}
+    // Siguiente imagen
+    function siguienteImagen() {
+        mostrarImagen(indice + 1);
+    }
 
+    // Iniciar reproducción automática
+    function iniciarCarrusel() {
+        clearInterval(intervalo);
+        intervalo = setInterval(siguienteImagen, 3000);
+    }
 
-/* =========================
-   SIGUIENTE
-========================= */
+    // Botones de navegación
+    siguiente.addEventListener('click', () => {
+        siguienteImagen();
+        iniciarCarrusel();
+    });
 
-if (botonSiguiente) {
+    anterior.addEventListener('click', () => {
+        mostrarImagen(indice - 1);
+        iniciarCarrusel();
+    });
 
-    botonSiguiente.addEventListener(
-        "click",
-        () => {
+    // Indicadores
+    indicadores.forEach((boton, i) => {
+        boton.addEventListener('click', () => {
+            mostrarImagen(i);
+            iniciarCarrusel();
+        });
+    });
 
-            indiceNosotros++;
+    // Pausar al pasar el cursor
+    carrusel.addEventListener('mouseenter', () => {
+        clearInterval(intervalo);
+    });
 
+    carrusel.addEventListener('mouseleave', iniciarCarrusel);
 
-            if (
-                indiceNosotros >=
-                imagenesNosotros.length
-            ) {
-
-                indiceNosotros = 0;
-
-            }
-
-
-            mostrarImagenNosotros(
-                indiceNosotros
-            );
-
-        }
-    );
-
-}
-
-
-/* =========================
-   ANTERIOR
-========================= */
-
-if (botonAnterior) {
-
-    botonAnterior.addEventListener(
-        "click",
-        () => {
-
-            indiceNosotros--;
-
-
-            if (indiceNosotros < 0) {
-
-                indiceNosotros =
-                    imagenesNosotros.length - 1;
-
-            }
-
-
-            mostrarImagenNosotros(
-                indiceNosotros
-            );
-
-        }
-    );
+    // Iniciar carrusel
+    mostrarImagen(0);
+    iniciarCarrusel();
 
 }
 
-
-/* =========================
-   CAMBIO AUTOMÁTICO
-========================= */
-
-if (
-    imagenesNosotros.length > 0
-) {
-
-    setInterval(() => {
-
-        indiceNosotros++;
-
-
-        if (
-            indiceNosotros >=
-            imagenesNosotros.length
-        ) {
-
-            indiceNosotros = 0;
-
-        }
-
-
-        mostrarImagenNosotros(
-            indiceNosotros
-        );
-
-    }, 5000);
-
-}
 /* =========================
    MOSTRAR / OCULTAR CORREOS
 ========================= */
