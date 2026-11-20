@@ -748,7 +748,7 @@ h1 {
     position: absolute;
 
     top: 30%;
-    left: 70%;
+    left: 50%;
     transform: translate(-50%, -50%);
 
     width: min(90%, 900px);
@@ -1219,7 +1219,8 @@ h1 {
 }
 
 .imagen-valores img {
-    width: 700px;     /* ajusta el tamaño */
+    width: 700px;      /* ajusta el tamaño */
+    max-width: 100%;     
     height: auto;     /* mantiene la proporción */
 }
 /* =========================
@@ -2154,4 +2155,54 @@ CONTACTO RESPONSIVE
     }
 
 }
+}
+/* =========================
+   CORRECCIÓN DE ANCHO RESPONSIVO
+========================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+/* Evitar desbordamientos en contenedores */
+.productos,
+.nosotros-page,
+.about,
+.contact,
+.footer {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Imágenes adaptables */
+img {
+    max-width: 100%;
+}
+
+/* Ajustes para tabletas y celulares */
+@media (max-width: 800px) {
+
+    .about-content,
+    .empresa-presentacion {
+        min-width: 0;
+    }
+
+    .productos-contenedor {
+        width: 100%;
+    }
+
+    .nosotros-container {
+        max-width: 100%;
+    }
+
+    .imagen-valores img {
+        width: 100%;
+        max-width: 700px;
+    }
 }
