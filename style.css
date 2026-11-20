@@ -200,10 +200,10 @@ h1 {
 /* =========================
    INICIO / HERO
 ========================= */
-/* TAMAÑO DEL INICIO */
+
 .hero {
-    min-height: 140vh;
-    padding: 30px 7% 30px;
+    min-height: 100vh;
+    padding: 110px 7% 60px;
 
     display: flex;
     align-items: center;
@@ -215,9 +215,16 @@ h1 {
 
     position: relative;
     overflow: hidden;
-     
 }
-
+.hero {
+    min-height: 90vh;
+    padding: 100px 5% 40px;
+}
+.hero {
+    min-height: 85vh;
+    padding: 90px 5% 35px;
+}
+     
 
 /* =========================
    LOGO - MARCA DE AGUA
