@@ -202,9 +202,8 @@ h1 {
 ========================= */
 /* TAMAÑO DEL INICIO */
 .hero {
-    min-height: 160vh;
-
-    padding: 90px 7% 90px;
+    min-height: 140vh;
+    padding: 30px 7% 30px;
 
     display: flex;
     align-items: center;
@@ -216,6 +215,7 @@ h1 {
 
     position: relative;
     overflow: hidden;
+     
 }
 
 
@@ -748,7 +748,7 @@ h1 {
     position: absolute;
 
     top: 30%;
-    left: 50%;
+    left: 65%;
     transform: translate(-50%, -50%);
 
     width: min(90%, 900px);
