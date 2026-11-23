@@ -203,7 +203,9 @@ h1 {
 
 .hero {
     min-height: 100vh;
-    padding: 110px 7% 60px;
+    width: 100%;
+
+    padding: 90px 7% 40px;
 
     display: flex;
     align-items: center;
@@ -215,16 +217,8 @@ h1 {
 
     position: relative;
     overflow: hidden;
-}
-.hero {
-    min-height: 90vh;
-    padding: 100px 5% 40px;
-}
-.hero {
-    min-height: 85vh;
-    padding: 90px 5% 35px;
-}
-     
+    box-sizing: border-box;
+}  
 
 /* =========================
    LOGO - MARCA DE AGUA
@@ -235,24 +229,24 @@ h1 {
 
     position: absolute;
 
-    top: 50%;
-    left: 50%;
+    top: 90px;
+    left: 0px;
+    
 
-    transform: translate(-50%, -50%);
-
-    width: 1500px;
-    height: 1250px;
+    width: 100%;
+    height: calc(100% - 90px);
 
     background-image: url("img/logoextra.jpeg");
-    background-size: contain;
-    background-position: center;
+
+    background-size: 99% 99%;
+    background-position: center center;
     background-repeat: no-repeat;
 
     opacity: 0.90;
 
     z-index: 0;
+    pointer-events: none;
 }
-
 
 /* =========================
    CONTENIDO DEL HERO
