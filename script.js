@@ -29,37 +29,37 @@ document.querySelectorAll(".nav a").forEach(link => {
 
 const servicios = {
 
-    control: {
-        titulo: "CONTROL ELÉCTRICO",
+control: {
+    titulo: "CONTROL ELÉCTRICO",
 
-        descripcion:
-            "",
+    descripcion: "",
 
-        productos: [
+    productos: [
 
-            {
-                nombre: "",
-                imagen: "img/categorias/img/ce1.png",
-                descripcion:
-                    ""
-            },
+        {
+            nombre: "",
+            imagen: "img/categorias/img/ce1.png",
+            claseImagen: "img-control-1",
+            descripcion: ""
+        },
 
-            {
-                nombre: "",
-                imagen: "img/productos/relevadores.jpg",
-                descripcion:
-                    ""
-            },
+        {
+            nombre: "",
+            imagen: "img/productos/relevadores.jpg",
+            claseImagen: "img-control-2",
+            descripcion: ""
+        },
 
-            {
-                nombre: "",
-                imagen: "img/productos/interruptores.jpg",
-                descripcion:
-                    ""
-            }
+        {
+            nombre: "",
+            imagen: "img/productos/interruptores.jpg",
+            claseImagen: "img-control-3",
+            descripcion: ""
+        }
 
-        ]
-    },
+    ]
+},
+      
 
 
     potencia: {
@@ -261,7 +261,10 @@ function mostrarCategoria(clave) {
 
         imagen.loading = "lazy";
 
-        imagen.addEventListener("error", () => {
+        // Asignar tamaño individual a cada imagen
+            imagen.className = producto.claseImagen || "";
+
+            imagen.addEventListener("error", () => {
 
             imagen.alt = `Imagen pendiente: ${producto.nombre}`;
 
