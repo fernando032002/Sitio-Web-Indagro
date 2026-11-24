@@ -6,102 +6,25 @@ const menuBtn = document.getElementById("menuBtn");
 const nav = document.querySelector(".nav");
 
 if (menuBtn && nav) {
-
     menuBtn.addEventListener("click", () => {
-
         nav.classList.toggle("active");
-
     });
-
 }
 
 
 /* =========================
-   CERRAR MENÚ
+   CERRAR MENÚ AL SELECCIONAR
 ========================= */
 
-const navLinks = document.querySelectorAll(".nav a");
-
-navLinks.forEach(link => {
-
+document.querySelectorAll(".nav a").forEach(link => {
     link.addEventListener("click", () => {
-
-        if (nav) {
-            nav.classList.remove("active");
-        }
-
+        nav?.classList.remove("active");
     });
-
 });
 
+
 /* =========================
-   ABRIR DETALLE DE PRODUCTOS
-========================= */
-
-const cards = document.querySelectorAll(".producto-card");
-
-cards.forEach(card => {
-
-    const boton = card.querySelector(".producto-boton");
-
-    if (!boton) return;
-
-    boton.addEventListener("click", () => {
-
-        // Obtener el producto desde el botón
-        const clave = boton.dataset.producto;
-
-        // Buscar su información
-        const servicio = servicios[clave];
-
-        if (!servicio) {
-            console.error("No se encontró el producto:", clave);
-            return;
-        }
-
-        // Verificar elementos del detalle
-        if (
-            !serviceDetail ||
-            !serviceTitle ||
-            !serviceDescription ||
-            !serviceImage ||
-            !serviceText
-        ) {
-            console.error("Faltan elementos del detalle en el HTML.");
-            return;
-        }
-
-        // Mostrar información
-        serviceTitle.textContent = servicio.titulo;
-        serviceDescription.textContent = servicio.descripcion;
-        serviceText.textContent = servicio.informacion;
-
-        // Mostrar imagen del producto
-        serviceImage.src = servicio.imagenPrincipal;
-        serviceImage.alt = servicio.titulo;
-
-        // Abrir el detalle
-        serviceDetail.style.display = "block";
-
-        // Desplazarse al detalle
-        setTimeout(() => {
-
-            const posicion =
-                serviceDetail.getBoundingClientRect().top +
-                window.scrollY - 110;
-
-            window.scrollTo({
-                top: posicion,
-                behavior: "smooth"
-            });
-
-        }, 100);
-
-    });
-
-});
-/* =========================
-   INFORMACIÓN DE PRODUCTOS
+   CATÁLOGO DE PRODUCTOS
 ========================= */
 
 const servicios = {
@@ -110,239 +33,457 @@ const servicios = {
         titulo: "CONTROL ELÉCTRICO",
 
         descripcion:
-            "Soluciones para el control y manejo de sistemas eléctricos.",
+            "",
 
-        imagenPrincipal:
-            "img/info1.png",
+        productos: [
 
-        informacion:
-            "CONTAMOS CON TODO LO NECESARIO PARA EL CONTROL DE TUS EQUIPOS O PROCESOS EN LAS MEJORES MARCAS"
+            {
+                nombre: "",
+                imagen: "img/productos/contactores.jpg",
+                descripcion:
+                    ""
+            },
+
+            {
+                nombre: "",
+                imagen: "img/productos/relevadores.jpg",
+                descripcion:
+                    ""
+            },
+
+            {
+                nombre: "",
+                imagen: "img/productos/interruptores.jpg",
+                descripcion:
+                    ""
+            }
+
+        ]
     },
+
 
     potencia: {
         titulo: "POTENCIA",
 
         descripcion:
-            "Servicios relacionados con sistemas de potencia eléctrica.",
+            "",
 
-        imagenPrincipal:
-            "img/potencia1.jpeg",
+        productos: [
 
-        informacion:
-            "Ofrecemos soluciones para sistemas de potencia eléctrica, equipos eléctricos y aplicaciones industriales."
+            {
+                nombre: "",
+                imagen: "img/productos/transformadores.jpg",
+                descripcion:
+                    ""
+            },
+
+            {
+                nombre: "",
+                imagen: "img/productos/tableros.jpg",
+                descripcion:
+                    ""
+            },
+
+            {
+                nombre: "",
+                imagen: "img/productos/protecciones.jpg",
+                descripcion:
+                    ""
+            }
+
+        ]
     },
+
 
     hidraulica: {
         titulo: "HIDRÁULICA",
 
         descripcion:
-            "Soluciones y servicios especializados en sistemas hidráulicos.",
+            "",
 
-        imagenPrincipal:
-            "img/hidraulica.",
+        productos: [
 
-        informacion:
-            "Trabajamos con sistemas hidráulicos, equipos, componentes y soluciones."
+            {
+                nombre: "",
+                imagen: "img/productos/bombas.jpg",
+                descripcion:
+                    ""
+            },
+
+            {
+                nombre: "",
+                imagen: "img/productos/valvulas.jpg",
+                descripcion:
+                    ""
+            },
+
+            {
+                nombre: "",
+                imagen: "img/productos/mangueras.jpg",
+                descripcion:
+                    ""
+            }
+
+        ]
     },
+
 
     automatizacion: {
         titulo: "AUTOMATIZACIÓN",
 
-        descripcion:
-            "Implementación y mejora de sistemas automatizados.",
+        descripcion:"",
+            
 
-        imagenPrincipal:
-            "img/automatizacion1.jpeg",
+        productos: [
 
-        informacion:
-            "Desarrollamos soluciones de automatización para mejorar el funcionamiento, control y eficiencia de los procesos."
+            {
+                nombre: "",
+                imagen: "img/productos/sensores.jpg",
+                descripcion:
+                    ""
+            },
+
+            {
+                nombre: "",
+                imagen: "img/productos/variadores.jpg",
+                descripcion:
+                    ""
+            },
+
+            {
+                nombre: "",
+                imagen: "img/productos/plc.jpg",
+                descripcion:
+                    ""
+            }
+
+        ]
     },
 
-    neumatica: {
+
+    servicios: {
         titulo: "SERVICIOS",
 
         descripcion:
-            "Servicios",
+            "Conoce algunos de los servicios que puede ofrecer IndAgro.",
 
-        imagenPrincipal:
-            "img/",
+        productos: [
 
-        informacion:
-            "....."
+            {
+                nombre: "Mantenimiento",
+                imagen: "img/productos/mantenimiento.jpg",
+                descripcion:
+                    ""
+            },
+
+            {
+                nombre: "Instalaciones",
+                imagen: "img/productos/instalaciones.jpg",
+                descripcion:
+                    ""
+            },
+
+            {
+                nombre: "Asesoría técnica",
+                imagen: "img/productos/asesoria.jpg",
+                descripcion:
+                    ""
+            }
+
+        ]
     }
 
 };
 
+
 /* =========================
-   ABRIR DETALLE DE PRODUCTOS
+   ELEMENTOS DEL CATÁLOGO
 ========================= */
 
-cards.forEach(card => {
+const serviceDetail =
+    document.getElementById("serviceDetail");
 
-    const boton = card.querySelector(".producto-boton");
+const serviceTitle =
+    document.getElementById("serviceTitle");
 
-    if (!boton) return;
+const serviceDescription =
+    document.getElementById("serviceDescription");
+
+const listaProductos =
+    document.getElementById("listaProductos");
+
+const backServices =
+    document.getElementById("backServices");
+
+
+/* =========================
+   MOSTRAR PRODUCTOS
+========================= */
+
+function mostrarCategoria(clave) {
+
+    const categoria = servicios[clave];
+
+    if (
+        !categoria ||
+        !serviceDetail ||
+        !serviceTitle ||
+        !serviceDescription ||
+        !listaProductos
+    ) {
+        console.error("No se pudo mostrar la categoría:", clave);
+        return;
+    }
+
+    // Actualizar título y descripción
+    serviceTitle.textContent = categoria.titulo;
+
+    serviceDescription.textContent = categoria.descripcion;
+
+    // Limpiar productos anteriores
+    listaProductos.replaceChildren();
+
+
+    // Crear tarjetas de productos
+    categoria.productos.forEach(producto => {
+
+        const tarjeta = document.createElement("article");
+
+        tarjeta.className = "catalogo-producto-card";
+
+
+        // Imagen
+        const imagen = document.createElement("img");
+
+        imagen.src = producto.imagen;
+
+        imagen.alt = producto.nombre;
+
+        imagen.loading = "lazy";
+
+        imagen.addEventListener("error", () => {
+
+            imagen.alt = `Imagen pendiente: ${producto.nombre}`;
+
+            imagen.classList.add("imagen-no-disponible");
+
+        }, { once: true });
+
+
+        // Contenido
+        const contenido = document.createElement("div");
+
+        contenido.className = "catalogo-producto-info";
+
+
+        // Nombre
+        const nombre = document.createElement("h3");
+
+        nombre.textContent = producto.nombre;
+
+
+        // Descripción
+        const descripcion = document.createElement("p");
+
+        descripcion.textContent = producto.descripcion;
+
+
+        // Agregar elementos
+        contenido.append(nombre, descripcion);
+
+        tarjeta.append(imagen, contenido);
+
+        listaProductos.appendChild(tarjeta);
+
+    });
+
+
+    // Mostrar catálogo
+    serviceDetail.classList.add("mostrar");
+
+
+    // Desplazarse al catálogo
+    setTimeout(() => {
+
+        const top =
+            serviceDetail.getBoundingClientRect().top +
+            window.scrollY - 110;
+
+        window.scrollTo({
+            top: top,
+            behavior: "smooth"
+        });
+
+    }, 100);
+
+}
+
+
+/* =========================
+   BOTONES DE CATEGORÍAS
+========================= */
+
+document.querySelectorAll(
+    ".producto-boton[data-producto]"
+).forEach(boton => {
 
     boton.addEventListener("click", () => {
 
-        const servicioSeleccionado = card.dataset.servicio;
-        const servicio = servicios[servicioSeleccionado];
+        const clave = boton.dataset.producto;
 
-        if (!servicio) {
-            console.error("No existe información para:", servicioSeleccionado);
-            return;
-        }
-
-        // Verificar que existan los elementos del detalle
-        if (
-            !serviceDetail ||
-            !serviceTitle ||
-            !serviceDescription ||
-            !serviceImage ||
-            !serviceText
-        ) {
-            console.error("Faltan elementos HTML del detalle del producto.");
-            return;
-        }
-
-        // Actualizar información
-        serviceTitle.textContent = servicio.titulo;
-        serviceDescription.textContent = servicio.descripcion;
-        serviceText.textContent = servicio.informacion;
-
-        // Mostrar una sola imagen
-        serviceImage.src = servicio.imagenPrincipal;
-        serviceImage.alt = servicio.titulo;
-
-        // Mostrar detalle
-        serviceDetail.style.display = "block";
-
-        // Desplazarse al detalle sin ocultarlo bajo el encabezado fijo
-        setTimeout(() => {
-
-            const posicion =
-                serviceDetail.getBoundingClientRect().top +
-                window.scrollY -
-                110;
-
-            window.scrollTo({
-                top: posicion,
-                behavior: "smooth"
-            });
-
-        }, 100);
+        mostrarCategoria(clave);
 
     });
 
 });
 
+
 /* =========================
-   REGRESAR A PRODUCTOS
+   REGRESAR A CATEGORÍAS
 ========================= */
 
 if (backServices && serviceDetail) {
 
-    backServices.addEventListener(
-        "click",
-        () => {
+    backServices.addEventListener("click", () => {
 
-            serviceDetail.style.display =
-                "none";
+        serviceDetail.classList.remove("mostrar");
 
+        document.querySelector(
+            ".productos-contenedor"
+        )?.scrollIntoView({
 
-            const servicesSection =
-                document.getElementById(
-                    "productos"
-                );
+            behavior: "smooth",
 
+            block: "start"
 
-            if (servicesSection) {
+        });
 
-                servicesSection.scrollIntoView({
-
-                    behavior: "smooth",
-
-                    block: "start"
-
-                });
-
-            }
-
-        }
-    );
+    });
 
 }
+
 
 /* ==================================
    CARRUSEL AUTOMÁTICO - NOSOTROS
 ================================== */
 
-const carrusel = document.querySelector('.nosotros-carousel');
+const carrusel =
+    document.querySelector(".nosotros-carousel");
 
 if (carrusel) {
 
-    const track = carrusel.querySelector('.carousel-track');
-    const slides = carrusel.querySelectorAll('.carousel-slide');
-    const anterior = carrusel.querySelector('.carousel-btn.prev');
-    const siguiente = carrusel.querySelector('.carousel-btn.next');
-    const indicadores = carrusel.querySelectorAll('.carousel-indicators button');
+    const track =
+        carrusel.querySelector(".carousel-track");
 
-    let indice = 0;
-    let intervalo;
+    const slides =
+        carrusel.querySelectorAll(".carousel-slide");
 
-    // Mostrar imagen
-    function mostrarImagen(posicion) {
+    const anterior =
+        carrusel.querySelector(".carousel-btn.prev");
 
-        indice = (posicion + slides.length) % slides.length;
+    const siguiente =
+        carrusel.querySelector(".carousel-btn.next");
 
-        track.style.transform = `translateX(-${indice * 100}%)`;
+    const indicadores =
+        carrusel.querySelectorAll(
+            ".carousel-indicators button"
+        );
 
-        indicadores.forEach((boton, i) => {
-            boton.classList.toggle('active', i === indice);
-        });
 
-    }
+    if (track && slides.length && anterior && siguiente) {
 
-    // Siguiente imagen
-    function siguienteImagen() {
-        mostrarImagen(indice + 1);
-    }
+        let indice = 0;
 
-    // Iniciar reproducción automática
-    function iniciarCarrusel() {
-        clearInterval(intervalo);
-        intervalo = setInterval(siguienteImagen, 3000);
-    }
+        let intervalo;
 
-    // Botones de navegación
-    siguiente.addEventListener('click', () => {
-        siguienteImagen();
-        iniciarCarrusel();
-    });
 
-    anterior.addEventListener('click', () => {
-        mostrarImagen(indice - 1);
-        iniciarCarrusel();
-    });
+        // Mostrar imagen
+        function mostrarImagen(posicion) {
 
-    // Indicadores
-    indicadores.forEach((boton, i) => {
-        boton.addEventListener('click', () => {
-            mostrarImagen(i);
+            indice =
+                (posicion + slides.length) % slides.length;
+
+            track.style.transform =
+                `translateX(-${indice * 100}%)`;
+
+            indicadores.forEach((boton, i) => {
+
+                boton.classList.toggle(
+                    "active",
+                    i === indice
+                );
+
+            });
+
+        }
+
+
+        // Iniciar reproducción automática
+        function iniciarCarrusel() {
+
+            clearInterval(intervalo);
+
+            intervalo = setInterval(() => {
+
+                mostrarImagen(indice + 1);
+
+            }, 3000);
+
+        }
+
+
+        // Botón siguiente
+        siguiente.addEventListener("click", () => {
+
+            mostrarImagen(indice + 1);
+
             iniciarCarrusel();
+
         });
-    });
 
-    // Pausar al pasar el cursor
-    carrusel.addEventListener('mouseenter', () => {
-        clearInterval(intervalo);
-    });
 
-    carrusel.addEventListener('mouseleave', iniciarCarrusel);
+        // Botón anterior
+        anterior.addEventListener("click", () => {
 
-    // Iniciar carrusel
-    mostrarImagen(0);
-    iniciarCarrusel();
+            mostrarImagen(indice - 1);
+
+            iniciarCarrusel();
+
+        });
+
+
+        // Indicadores
+        indicadores.forEach((boton, i) => {
+
+            boton.addEventListener("click", () => {
+
+                mostrarImagen(i);
+
+                iniciarCarrusel();
+
+            });
+
+        });
+
+
+        // Pausar al pasar el cursor
+        carrusel.addEventListener("mouseenter", () => {
+
+            clearInterval(intervalo);
+
+        });
+
+
+        // Reanudar al retirar el cursor
+        carrusel.addEventListener("mouseleave", iniciarCarrusel);
+
+
+        // Iniciar carrusel
+        mostrarImagen(0);
+
+        iniciarCarrusel();
+
+    }
 
 }
 
@@ -359,28 +500,15 @@ const correos =
 
 if (btnCorreos && correos) {
 
-    btnCorreos.addEventListener(
-        "click",
-        () => {
+    btnCorreos.addEventListener("click", () => {
 
-            correos.classList.toggle("mostrar");
+        correos.classList.toggle("mostrar");
 
+        btnCorreos.textContent =
+            correos.classList.contains("mostrar")
+                ? "OCULTAR CORREOS"
+                : "VER CORREOS";
 
-            if (
-                correos.classList.contains("mostrar")
-            ) {
-
-                btnCorreos.textContent =
-                    "OCULTAR CORREOS";
-
-            } else {
-
-                btnCorreos.textContent =
-                    "VER CORREOS";
-
-            }
-
-        }
-    );
+    });
 
 }

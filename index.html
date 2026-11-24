@@ -16,6 +16,7 @@
 
     <!-- Conexión con CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="catalogo.css">
 
 </head>
 
@@ -69,9 +70,7 @@
     <div class="productos-encabezado">
         <span class="subtitulo">NUESTROS</span>
         <h2>PRODUCTOS</h2>
-        <p>
-            
-        </p>
+        <p>Conoce nuestras categorías de productos y servicios.</p>
     </div>
 
     <div class="productos-contenedor">
@@ -79,131 +78,81 @@
         <!-- CONTROL ELÉCTRICO -->
         <article class="producto-card control">
             <div class="producto-imagen">
-                <img src="img/control-electrico.jpg"
-                     alt="Equipos de control eléctrico">
+                <img src="img/control-electrico.jpg" alt="Equipos de control eléctrico">
                 <div class="producto-icono">ϟ</div>
             </div>
             <div class="producto-info">
                 <h3>CONTROL ELÉCTRICO</h3>
                 <span class="linea"></span>
-               
-                <button class="producto-boton" data-producto="control">
-                    Ver <span>→</span>
-                </button>
+                <button class="producto-boton" type="button" data-producto="control">Ver <span>→</span></button>
             </div>
         </article>
 
         <!-- POTENCIA -->
         <article class="producto-card potencia">
             <div class="producto-imagen">
-                <img src="img/potencia.png" alt="">"
-                     alt="Equipos de potencia eléctrica">
+                <img src="img/potencia.png" alt="Equipos de potencia eléctrica">
                 <div class="producto-icono">⚙️</div>
             </div>
             <div class="producto-info">
                 <h3>POTENCIA</h3>
                 <span class="linea"></span>
-                
-                <button class="producto-boton" data-producto="potencia">
-                    Ver <span>→</span>
-                </button>
+                <button class="producto-boton" type="button" data-producto="potencia">Ver <span>→</span></button>
             </div>
         </article>
 
         <!-- HIDRÁULICA -->
         <article class="producto-card hidraulica">
             <div class="producto-imagen">
-                <img src="img/hidraulica.jpg"
-                     alt="Mangueras y componentes hidráulicos">
+                <img src="img/hidraulica.jpg" alt="Mangueras y componentes hidráulicos">
                 <div class="producto-icono">◉</div>
             </div>
             <div class="producto-info">
                 <h3>HIDRÁULICA</h3>
                 <span class="linea"></span>
-                
-                <button class="producto-boton" data-producto="hidraulica">
-                    Ver <span>→</span>
-                </button>
+                <button class="producto-boton" type="button" data-producto="hidraulica">Ver <span>→</span></button>
             </div>
         </article>
 
         <!-- AUTOMATIZACIÓN -->
         <article class="producto-card automatizacion">
             <div class="producto-imagen">
-                <img src="img/automatizacion.jpg"
-                     alt="Equipos de automatización industrial">
+                <img src="img/automatizacion.jpg" alt="Equipos de automatización industrial">
                 <div class="producto-icono">⌘</div>
             </div>
             <div class="producto-info">
                 <h3>AUTOMATIZACIÓN</h3>
                 <span class="linea"></span>
-                
-                <button class="producto-boton" data-producto="automatizacion">
-                    Ver <span>→</span>
-                </button>
+                <button class="producto-boton" type="button" data-producto="automatizacion">Ver <span>→</span></button>
             </div>
         </article>
 
         <!-- SERVICIOS -->
         <article class="producto-card servicios">
             <div class="producto-imagen">
-                <img src="img/servicios.jpg"
-                     alt="Servicios">
-                <div class="producto-icono">👷‍♂️</a></div>
+                <img src="img/servicios.jpg" alt="Servicios de IndAgro">
+                <div class="producto-icono">👷‍♂️</div>
             </div>
             <div class="producto-info">
                 <h3>SERVICIOS</h3>
                 <span class="linea"></span>
-                
-                <button class="producto-boton" data-producto="neumatica">
-                    Ver <span>→</span>
-                </button>
+                <button class="producto-boton" type="button" data-producto="servicios">Ver <span>→</span></button>
             </div>
         </article>
 
     </div>
+
+    <!-- CATÁLOGO QUE APARECE DEBAJO DE LAS CATEGORÍAS -->
+    <div class="service-detail" id="serviceDetail" aria-live="polite">
+        <h2 id="serviceTitle">Selecciona una categoría</h2>
+        <p id="serviceDescription">Aquí aparecerán los productos de la categoría seleccionada.</p>
+
+        <div class="catalogo-productos-grid" id="listaProductos"></div>
+
+        <button class="btn" id="backServices" type="button">REGRESAR A CATEGORÍAS</button>
+    </div>
+
 </section>
-
-<!-- =========================
-     DETALLE DEL PRODUCTO
-========================= -->
-
-<div class="service-detail" id="serviceDetail">
-
-    <h2 id="serviceTitle">
-        Selecciona un producto
-    </h2>
-
-    <p id="serviceDescription">
-        Haz clic en un producto para ver más información.
-    </p>
-
-    <!-- Imagen única -->
-    <div class="product-main-image">
-
-        <img id="serviceImage"
-             src=""
-             alt="Imagen del producto">
-
-    </div>
-
-    <!-- Información -->
-    <div class="service-content">
-
-        <br>
-        <p id="serviceText">
-            Aquí aparecerá la información del producto seleccionado.
-        </p>
-
-    </div>
-    <br>
-    <button class="btn" id="backServices">
-        REGRESAR A PRODUCTOS
-    </button>
-
-</div>
-
-    </section>
 
 <!-- =========================
      NOSOTROS

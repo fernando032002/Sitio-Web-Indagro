@@ -1,0 +1,143 @@
+/* =========================
+   CATÁLOGO DE PRODUCTOS
+========================= */
+
+.service-detail {
+    display: none;
+    max-width: 1600px;
+    width: 100%;
+    margin: 55px auto 0;
+    padding: 45px 30px;
+
+    background: #ffffff;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    text-align: center;
+    scroll-margin-top: 110px;
+    animation: aparecerCatalogo 0.45s ease;
+}
+
+.service-detail.mostrar {
+    display: block;
+}
+
+/* TÍTULO */
+.service-detail h2 {
+    color: #12366c;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(27px, 3vw, 40px);
+    margin-bottom: 12px;
+}
+
+/* DESCRIPCIÓN GENERAL */
+.service-detail > p {
+    color: #687894;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0 auto 45px;
+}
+
+/* DISTRIBUCIÓN DE PRODUCTOS */
+.catalogo-productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 45px;
+    row-gap: 50px;
+    text-align: center;
+}
+
+/* PRODUCTO INDIVIDUAL */
+.catalogo-producto-card {
+    min-width: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+    transition: transform 0.3s ease;
+}
+
+.catalogo-producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: none;
+}
+
+/* IMÁGENES */
+.catalogo-producto-card img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    padding: 0;
+
+    object-fit: contain;
+    background: transparent;
+}
+
+/* INFORMACIÓN DEL PRODUCTO */
+.catalogo-producto-info {
+    padding: 18px 5px;
+}
+
+.catalogo-producto-info h3 {
+    color: #12366c;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.catalogo-producto-info p {
+    color: #59677a;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* BOTÓN REGRESAR */
+#backServices {
+    margin-top: 35px;
+}
+
+/* ANIMACIÓN */
+@keyframes aparecerCatalogo {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* TABLET */
+@media (max-width: 950px) {
+    .catalogo-productos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 30px;
+    }
+}
+
+/* CELULAR */
+@media (max-width: 600px) {
+    .service-detail {
+        margin-top: 35px;
+        padding: 28px 15px;
+    }
+
+    .catalogo-productos-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .catalogo-producto-card img {
+        height: 240px;
+    }
+
+    .catalogo-producto-info {
+        padding: 15px 5px;
+    }
+}
