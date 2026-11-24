@@ -39,7 +39,7 @@ const servicios = {
 
             {
                 nombre: "",
-                imagen: "img/productos/contactores.jpg",
+                imagen: "img/categorias/img/ce1.png",
                 descripcion:
                     ""
             },
@@ -72,21 +72,21 @@ const servicios = {
 
             {
                 nombre: "",
-                imagen: "img/productos/transformadores.jpg",
+                imagen: "img/categorias/img/p1.jpeg",
                 descripcion:
                     ""
             },
 
             {
                 nombre: "",
-                imagen: "img/productos/tableros.jpg",
+                imagen: "img/categorias/img/p2.jpeg",
                 descripcion:
                     ""
             },
 
             {
                 nombre: "",
-                imagen: "img/productos/protecciones.jpg",
+                imagen: "img/categorias/img/p3.jpeg",
                 descripcion:
                     ""
             }
