@@ -230,11 +230,10 @@ h1 {
     position: absolute;
 
     top: 90px;
-    left: 0px;
-    
+    bottom: 20px;
 
-    width: 100%;
-    height: calc(100% - 90px);
+    left: 0;
+    right: 0;
 
     background-image: url("img/logoextra.jpeg");
 
